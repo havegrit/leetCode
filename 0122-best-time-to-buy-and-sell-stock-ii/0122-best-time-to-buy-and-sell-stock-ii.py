@@ -12,7 +12,7 @@ class Solution:
             sellDate = cnt
             if prices[buyDate] < prices[sellDate]:
                 totalProfit += prices[sellDate] - prices[buyDate]
-            for j in range(i + 1, len(prices)):
+            for j in range(i + 2, len(prices)):
                 buyDate = sellDate
                 sellDate = j
                 if prices[buyDate] >= prices[sellDate]:
