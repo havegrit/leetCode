@@ -3,6 +3,6 @@ class Solution:
         for char in ransomNote:
             if not magazine.count(char) >= ransomNote.count(char):
                 return False
-            ransomNote.replace(char, '')
+            ransomNote = ransomNote.replace(char, '')
         
         return True
