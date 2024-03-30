@@ -8,8 +8,10 @@ class Solution:
             return False
         
         for i in range(len(words)):
-            if dic.get(pattern[i]) == None and words[i] not in dic.values():
-                dic[pattern[i]] = words[i]  
+            if dic.get(pattern[i]) == None:
+                if words[i] in dic.values():
+                    return False
+            dic[pattern[i]] = words[i]  
         
         for j in range(len(pattern)):
             if dic.get(pattern[j]) == None:
